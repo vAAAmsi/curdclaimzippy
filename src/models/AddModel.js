@@ -16,17 +16,20 @@ import {
 import { connect } from 'react-redux'
 import React, {useState} from 'react'
 import { DataAdding } from '../redux-store/actions'
+import Swal from 'sweetalert2'
 
 const AddModel = ({ isModalOpen, closeModal,state, DataAdding}) => {
-    console.log(state)
     const [title, setTitle] = useState('')
     const [desc, setDesc] = useState('')
 
     const addtask = (e) => {
         e.preventDefault()
-        // console.log(title, desc)
         DataAdding({id : state.length + 1,title :title,desc : desc})
         closeModal()
+        Swal.fire({
+            icon:"success",
+            title:"Successfully added your task.",
+        })
     }
 
   return (

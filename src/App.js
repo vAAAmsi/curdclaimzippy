@@ -1,11 +1,13 @@
-import TopBar from "./components/TopBar";
-import Page1 from "./Pages/page1";
+import { Route, Routes } from "react-router-dom";
+import Page1 from "./Pages/homepage";
 
 function App() {
   return (
     <>
-      <TopBar title="Tasks" />
-      <Page1 />
+      <Routes>
+        <Route path="/" element={<Page1 />} />
+        <Route path="/edit" element= {<>eidt page</>} />
+      </Routes>
     </>
   );
 }
