@@ -6,7 +6,6 @@ import {
     ModalBody,
     ModalCloseButton,
     Flex,
-    Button,
     Text,
 } from '@chakra-ui/react'
 import React from 'react'
@@ -16,14 +15,14 @@ const ViewModel = ({ isModalOpen, closeModal,data }) => {
   return (
     <Modal isOpen={isModalOpen} onClose={closeModal} isCentered={true}>
     <ModalOverlay />
-    <ModalContent>
+    <ModalContent w={{base:"85%"}}>
       <ModalHeader>
-          Viewing the task {data?.title}
+          Viewing the task named <span style={{color:"#2ECC71",fontSize:"24px",textDecoration:"underline"}}>{data?.title}</span>
       </ModalHeader>
       <ModalCloseButton />
       <ModalBody>
       <Flex gap="1rem" mb={5} flexDir="column" >
-        <Text>
+        <Text >
          {data?.title}
         </Text>
         <Text>

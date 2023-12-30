@@ -33,9 +33,9 @@ const AddModel = ({ isModalOpen, closeModal,state, DataAdding}) => {
     }
 
   return (
-    <Modal isOpen={isModalOpen} onClose={closeModal} isCentered={true}>
+    <Modal isOpen={isModalOpen} onClose={closeModal}  isCentered={true}>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent w={{base:"85%"}}>
         <ModalHeader>
             Add A Task
         </ModalHeader>
