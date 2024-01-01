@@ -34,6 +34,7 @@ To run this application locally, follow these steps:
 ### Project Structure
 
 /src
+
     components       
     models          
     pages            
