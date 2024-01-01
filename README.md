@@ -1,18 +1,54 @@
-# Getting Started with Create React App
+### React Redux CRUD Application
+
+This project is a simple CRUD (Create, Read, Update, Delete) application built with React and Redux. It allows users to perform basic operations on a list of tasks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To run this application locally, follow these steps:
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    git clone https://github.com/vAAAmsi/curdclaimzippy
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the project directory:
+
+    cd curdclaimzippy
+
+3. Install dependencies:
+    npm install
+
+4. Start the development server:
+    npm start
+
+5. Open your browser and visit http://localhost:3000 to view the application.
+
+### Features
+
+1. Create: Add new tasks.
+2. Read: View the list of tasks.
+3. Update: Edit the details of existing tasks.
+4. Delete: Remove a particular task from the tasks.
+
+### Project Structure
+
+/src
+    components       # we have a reusable Topbar component
+    models           # add model and view model
+    pages            # React components  
+    redux-store      # Actions, Redux Reducers and Redux store configuration  
+    utils            # Useful reusable components                               
+    App.js           # Main application component
+    index.js         # Entry point
+
+### Technologies Used
+
+    React
+    Redux
+    React Router
+    Chakra UI
+    Other dependencies(sweetalert2 etc..)
 
 ### `npm test`
 
