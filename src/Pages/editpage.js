@@ -13,7 +13,7 @@ import { connect } from 'react-redux'
 import { Editing } from '../redux-store/actions'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
-
+import '../App.css'
 const EditPage = ({Editing}) => {
   const location = useLocation();
   const [Rdata, setRdata] = useState(location.state);
@@ -53,7 +53,8 @@ const EditPage = ({Editing}) => {
        justifyContent="center" mt="5%" alignItems="center">
         <form 
         onSubmit={(e) =>  UpdateHandler(e)} 
-        style={{width:"80%"}}
+        // style={{width:"50%"}}
+        className="form"
         >
         <FormControl >
           <Box display="flex" w="100%" flexDir="column" gap="20px">

@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Input, Text } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import AddModel from '../models/AddModel';
 import ViewModel from '../models/ViewModel';
 import { connect } from 'react-redux';
@@ -10,6 +10,7 @@ import {
 } from '../redux-store/actions';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import capitalize from '../utils/Capitalize';
 
 const Page1 = ({
   state,
@@ -19,7 +20,6 @@ const Page1 = ({
   const [isViewModelOpen, setViewModelOpen] = useState(false)
   const [viewingData, setViewingData] = useState(null)
   const [searchText, setSearchText] = useState('')
-  console.log(searchText)
   const navigate = useNavigate()
 
   const openAddModal = () => {
@@ -41,7 +41,7 @@ const Page1 = ({
     }).then((result) => {
       if (result.isConfirmed) {
         Deleting(id);
-        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+        Swal.fire('Deleted!', 'Your task has been deleted.', 'success');
       }
     });
   }
@@ -108,7 +108,7 @@ const Page1 = ({
                         fontSize="18px"
                         color="green"
                         >
-                          Title: <span style={{color:"black"}}>{item.title}</span>
+                          Title: <span style={{color:"black"}}>{capitalize(item.title)}</span>
                         </Text>
                         <Text pl="10px" fontSize="16px">Description:</Text>
                         <Text pl="10px" pr="20px" fontSize="15px" color="gray">{item.desc}</Text>
@@ -160,7 +160,7 @@ const Page1 = ({
            w={{base:"80%"}}
            fontSize="14px"
            >
-            {"No Tasks Available. Please click on the Above Add a Task button to add some Tasks"}
+            {"No Tasks Available. Please click on the Above Add a Task button to add some Tasks."}
           </Text>
           </Flex>
         }

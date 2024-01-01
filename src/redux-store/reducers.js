@@ -6,7 +6,7 @@ const data = [{
 
 export const reducer = (state = data,action) => {
     const {type,payload} = action;
-    // console.log(payload)
+    
     switch(type){
         case "ADD" : 
             return [...state,payload]
