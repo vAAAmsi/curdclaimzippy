@@ -34,13 +34,13 @@ To run this application locally, follow these steps:
 ### Project Structure
 
 /src
-    components       # we have a reusable Topbar component
-    models           # add model and view model
-    pages            # React components  
-    redux-store      # Actions, Redux Reducers and Redux store configuration  
-    utils            # Useful reusable components                               
-    App.js           # Main application component
-    index.js         # Entry point
+    components       
+    models          
+    pages            
+    redux-store      
+    utils                                       
+    App.js          
+    index.js 
 
 ### Technologies Used
 
